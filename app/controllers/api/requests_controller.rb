@@ -7,7 +7,7 @@ module Api
         db_result = connection.execute(params[:sql])
         result = db_result.to_json
       rescue Exception => e
-        result = {status: 500, error_message: result}
+        result = {status: 500, error_message: e.message}
       end
       render :json => result
     end
