@@ -9,7 +9,7 @@ module Api
       rescue Exception => e
         result = {status: 500, error_message: result}
       end
-      render result
+      render :json => result
     end
   end
 end
