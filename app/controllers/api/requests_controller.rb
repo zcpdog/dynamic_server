@@ -1,6 +1,6 @@
 module Api
   class RequestsController < ::ApplicationController
-    def execuate
+    def index
       begin
         password = Rails.application.secrets.sql_secret_key
         connection = ActiveRecord::Base.connection
